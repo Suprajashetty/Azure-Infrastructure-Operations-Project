@@ -19,15 +19,15 @@ AzureParamValue.json – Passes the parameter values
 
 Create the policy definitition and assignment:
 
-*az policy definition create --name tagging-policy --mode All --rules AzureTagPolicy.json --param AzurepolicyParam.json
+**az policy definition create --name tagging-policy --mode All --rules AzureTagPolicy.json --param AzurepolicyParam.json
 
-*az policy assignment create --name tagging-policy --policy tagging-policy --param  AzureParamValue.json 
+**az policy assignment create --name tagging-policy --policy tagging-policy --param  AzureParamValue.json 
 
 Create a template using packer
 ------------------------------
 Login to azure:
 
-*az login
+**az login
 
 Before running packer, ensure that resource group is created
 
@@ -35,16 +35,16 @@ Create a server.json template file for packer
 
 Execute below command in azure CLI:
 
-*packer build server.json
+**packer build server.json
 
 Provision resources using terraform
 -----------------------------------
 Download plugins:
 Create main.tf and vars.tf file for provisioning resourses and execute below command in CLI
 
-*terraform init
+**terraform init
 
-*terraform validate
+**terraform validate
 
 The following settings can be customized by editing the variables in the vars.tf file:
 
@@ -62,11 +62,11 @@ Ensure that VM image to deploy should match the name of the image created by pac
 Provison the resources:
 To create the plan ececute below command:
  
- *terraform plan -out solution.plan
+ **terraform plan -out solution.plan
 
- *terraform apply solution.plan
+ **terraform apply solution.plan
 
 Once your resources are no longer required, delete them:
 
-*terraform destroy
+**terraform destroy
 
