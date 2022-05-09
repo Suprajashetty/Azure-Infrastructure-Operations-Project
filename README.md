@@ -48,9 +48,13 @@ Create main.tf and vars.tf file for provisioning resourses and execute below com
 
 The following settings can be customized by editing the variables in the vars.tf file:
 •	prefix - The prefix which should be used for all resources in this project
+
 •	location - The Azure Region in which all resources in this project should be created.
+
 •	number_of_vms - Number of VMs to provision
+
 •	username - The username for VM.
+
 •	password - The password for VM.
 
 Ensure that VM image to deploy should match the name of the image created by packer
