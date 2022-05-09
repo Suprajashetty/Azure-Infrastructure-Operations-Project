@@ -47,6 +47,7 @@ Create main.tf and vars.tf file for provisioning resourses and execute below com
 *terraform validate
 
 The following settings can be customized by editing the variables in the vars.tf file:
+
 •	prefix - The prefix which should be used for all resources in this project
 
 •	location - The Azure Region in which all resources in this project should be created.
